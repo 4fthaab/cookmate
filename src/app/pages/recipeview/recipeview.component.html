@@ -1,0 +1,25 @@
+<div class="container text-center" *ngIf="recipe">
+  <div class="d-flex flex-wrap align-items-start gap-4" style="margin: 30px 0;">
+    <section style="margin: auto;">
+      <h2 class="fw-bold" style="color: #a9543f; margin-top: 10px; text-align: left; margin: 1%;">{{ recipe.strMeal }}
+      </h2>
+      <h6 class="text-primary" style="text-align: left; margin: 1%;">{{ recipe.strCategory }} | {{ recipe.strArea }}
+      </h6>
+      <img [src]="recipe.strMealThumb" alt="Meal Image" class="img-fluid rounded-4 shadow"
+        style="max-width: 270px; height: auto;">
+    </section>
+    <div style="flex: 1;">
+      <h6 class="text-muted" style="text-align: left;"><u>Instructions</u></h6>
+      <ul class="text-muted mt-3" style="padding-left: 1rem; list-style-position: outside; text-align: left;">
+        <ng-container *ngFor="let step of recipe.strInstructions.split('.')">
+          <li *ngIf="step.trim()">{{ step.trim() }}.</li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+
+  <a [href]="recipe.strYoutube" class="btn btn-danger mt-3" target="_blank">
+    Watch Tutorial on YouTube
+  </a>
+</div>
+<br>

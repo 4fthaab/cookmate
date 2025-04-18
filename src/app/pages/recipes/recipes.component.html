@@ -1,0 +1,7 @@
+<div class="row">
+  @for (item of recipes; track item.link) {
+    <div class="col-12 col-sm-6 col-md-3 mb-4 d-flex justify-content-center">
+      <app-cards [data]="item"></app-cards>
+    </div>
+  }
+</div>

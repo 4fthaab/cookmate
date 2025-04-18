@@ -1,0 +1,132 @@
+<div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/1529444830.jpg" class="card-img-top"
+              alt="Chicken Handi">
+            <div class="card-body">
+              <h5 class="card-title">Chicken Handi</h5>
+              <a href="/recipeview/52796" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" class="card-img-top"
+              alt="Beef and Oyster pie">
+            <div class="card-body">
+              <h5 class="card-title">Beef and Oyster pie</h5>
+              <a href="/recipeview/52804" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/1529446137.jpg" class="card-img-top"
+              alt="Ratatouille">
+            <div class="card-body">
+              <h5 class="card-title">Ratatouille</h5>
+              <a href="/recipeview/52855" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/1550441882.jpg" class="card-img-top" alt="Dal fry">
+            <div class="card-body">
+              <h5 class="card-title">Dal fry</h5>
+              <a href="/recipeview/52785" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg" class="card-img-top"
+              alt="Lamb Biryani">
+            <div class="card-body">
+              <h5 class="card-title">Lamb Biryani</h5>
+              <a href="/recipeview/52805" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/vvpprx1487325699.jpg" class="card-img-top"
+              alt="Beef Bourguignon">
+            <div class="card-body">
+              <h5 class="card-title">Beef Bourguignon</h5>
+              <a href="/recipeview/52904" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg" class="card-img-top"
+              alt="Chicken Congee">
+            <div class="card-body">
+              <h5 class="card-title">Chicken Congee</h5>
+              <a href="/recipeview/52956" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/xrrtss1511555269.jpg" class="card-img-top"
+              alt="Egg Drop Soup">
+            <div class="card-body">
+              <h5 class="card-title">Egg Drop Soup</h5>
+              <a href="/recipeview/52955" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://www.themealdb.com/images/media/meals/1549542877.jpg" class="card-img-top"
+              alt="French Onion Soup">
+            <div class="card-body">
+              <h5 class="card-title">French Onion Soup</h5>
+              <a href="/recipeview/52821" class="btn btn-primary">View Recipe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var recipeCarousel = document.getElementById('recipeCarousel');
+    var carousel = new bootstrap.Carousel(recipeCarousel, {
+      interval: 3,
+      wrap: true,
+      touch: true
+    });
+  });
+</script>

@@ -1,0 +1,159 @@
+// Variables
+$primary-color: #ff6b6b; // Warm tomato-like color
+$secondary-color: #4ecdc4; // Fresh mint color
+$dark-color: #333;
+$light-color: #f8f9fa;
+$font-main: 'Poppins', sans-serif;
+$font-secondary: 'Playfair Display', serif;
+
+// Mixins
+@mixin card-shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Base Styles
+.contact-us-container {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  font-family: $font-main;
+  color: $dark-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .contact-us-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    padding: 3rem;
+    @include card-shadow;
+
+    .title {
+      font-family: $font-secondary;
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 1rem;
+      text-align: center;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: $secondary-color;
+        margin: 1rem auto;
+      }
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      color: lighten($dark-color, 20%);
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+
+      .contact-item {
+        background: $light-color;
+        padding: 2rem;
+        border-radius: 8px;
+        border-top: 4px solid $primary-color;
+        @include card-shadow;
+
+        h2 {
+          font-family: $font-secondary;
+          color: $primary-color;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+
+        p {
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+          color: lighten($dark-color, 15%);
+        }
+
+        a {
+          color: $secondary-color;
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: darken($secondary-color, 15%);
+            text-decoration: underline;
+          }
+        }
+
+        .social-links {
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+
+          a {
+            background:#0020c1;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: darken(#0020c1, 10%);
+              text-decoration: none;
+              transform: translateY(-2px);
+            }
+
+            &:nth-child(2) {
+              background: #000000; // Twitter blue
+
+              &:hover {
+                background: #333;
+              }
+            }
+
+            &:nth-child(3) {
+              background: #c30b73; // Instagram pink
+
+              &:hover {
+                background: darken(#b230e1, 10%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+  .contact-us-container {
+    padding: 2rem 1rem;
+
+    .contact-us-wrapper {
+      padding: 2rem 1.5rem;
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

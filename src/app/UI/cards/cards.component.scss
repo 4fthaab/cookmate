@@ -1,0 +1,42 @@
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .card-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 50px;
+  }
+
+  .btn {
+    background-color: #ff7e5f;
+    border: none;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #ff5733;
+    }
+  }
+}
+
+// Optional: Add margin inside the card body if needed
+.card-body {
+  padding: 1rem;
+}
